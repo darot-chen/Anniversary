@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Root height is wrap_content (not match_parent): the widget should hug
+     its content regardless of how much grid space the launcher reserves or
+     the user resizes it to, rather than centering inside leftover space. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/widget_background">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/widget_user_photo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/widget_avatar_bg"
+                android:padding="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_widget_person" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:text="❤️"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/widget_partner_photo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/widget_avatar_bg"
+                android:padding="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_widget_person" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/widget_names"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text=""
+            android:textColor="@color/widget_text_primary"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/widget_day_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="0 Days"
+            android:textColor="@color/widget_accent"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/widget_since"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Since —"
+            android:textColor="@color/widget_text_secondary"
+            android:textSize="11sp"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+    </LinearLayout>
+
+</FrameLayout>
